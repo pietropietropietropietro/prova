@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<div id="cookie-banner">
+    <i class="fas fa-cookie-bite" style="margin-right: 10px;"></i>
+    <p>Questo sito utilizza cookie per migliorare l'esperienza utente. Continuando a navigare, accetti l'uso dei cookie.</p>
+    <button id="accept-cookie-btn">Accetta</button>
+</div>
+
+<script>
+    // JavaScript per nascondere il banner quando l'utente accetta i cookie
+    document.getElementById('accept-cookie-btn').addEventListener('click', function() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookieAccepted', 'true');
+    });
+
+    // Mostra il banner solo se l'utente non ha ancora accettato
+    if (!localStorage.getItem('cookieAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+    }
+</script>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pagine/pagina1.html">Pagina 1</a></li>
+                <li><a href="pagine/pagina2.html">Pagina 2</a></li>
+                <li><a href="pagine/pagina3.html">Pagina 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <h1>Benvenuti nel Progetto Universitario</h1>
+            <p>Esplora le nostre pagine per scoprire i concetti chiave di HTML, CSS, e JavaScript.</p>
+            <a href="pagine/pagina1.html" class="cta-button">Inizia</a>
+        </section>
+    </main>
+</body>
+</html>
