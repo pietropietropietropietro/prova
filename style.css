@@ -185,3 +185,27 @@ main {
 #cookie-banner button:hover {
     background-color: #e6b800;
 }
+
+/* Stile per il pulsante "Torna su" */
+#scrollToTopBtn {
+    display: none; /* Inizialmente nascosto */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000; /* Per essere sopra agli altri elementi */
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Rende il pulsante rotondo */
+    width: 50px; /* Dimensione del pulsante */
+    height: 50px; /* Dimensione del pulsante */
+    padding: 0; /* Rimuove il padding */
+    text-align: center; /* Centra il testo */
+    font-size: 24px; /* Dimensione del carattere */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #007bb5; /* Colore al passaggio del mouse */
+}

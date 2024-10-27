@@ -40,11 +40,30 @@
         </nav>
     </header>
     <main>
+	<button id="scrollToTopBtn" title="Torna su">↑</button>
         <section class="hero-section">
-            <h1>Benvenuti nel Progetto Universitario</h1>
+            <h1>Benvenuti nel Sito1</h1>
             <p>Esplora le nostre pagine per scoprire i concetti chiave di HTML, CSS, e JavaScript.</p>
             <a href="pagine/pagina1.html" class="cta-button">Inizia</a>
         </section>
     </main>
+<script>
+    // Ottieni il bottone
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Mostra il bottone quando si scrolla giù
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Quando si clicca sul bottone, scrolla fino in cima
+    scrollToTopBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+</script>
 </body>
 </html>

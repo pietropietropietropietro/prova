@@ -17,10 +17,29 @@
         </nav>
     </header>
     <main>
+	<button id="scrollToTopBtn" title="Torna su">↑</button>
         <section class="content-card">
             <h2>Benvenuto alla Pagina 3</h2>
-            <p>Questo è il contenuto della Pagina 3 del progetto universitario.</p>
+            <p>Questo è il contenuto della Pagina 3.</p>
         </section>
     </main>
+<script>
+    // Ottieni il bottone
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Mostra il bottone quando si scrolla giù
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Quando si clicca sul bottone, scrolla fino in cima
+    scrollToTopBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+</script>
 </body>
 </html>

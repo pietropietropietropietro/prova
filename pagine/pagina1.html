@@ -17,10 +17,43 @@
         </nav>
     </header>
     <main>
+	<button id="scrollToTopBtn" title="Torna su">↑</button>
         <section class="content-card">
             <h2>Benvenuto alla Pagina 1</h2>
-            <p>Questo è il contenuto della Pagina 1 del progetto universitario.</p>
+            	<p>
+		Rutrum lobortis pulvinar suscipit iaculis rutrum eget! Dui; nam commodo curabitur convallis netus adipiscing sollicitudin libero ligula adipiscing! Eleifend nostra ac cum 		erat est primis. Diam sem libero dictum purus mollis ut non, non interdum erat? Mattis vulputate bibendum etiam ut! Scelerisque cras gravida tortor varius metus curae; 		varius nisi. Pharetra gravida ad rhoncus felis venenatis auctor fringilla.
+		</p>
+		<p>
+			Risus nisi interdum habitasse condimentum mi ullamcorper nisi sociis luctus pharetra. Convallis sodales erat ipsum praesent commodo neque! Dictumst volutpat viverra 			porta, mauris suspendisse venenatis blandit fermentum ipsum aliquet. Tellus nec facilisis dictumst sociosqu. Aliquam interdum varius fames convallis facilisis 				fermentum cras donec enim diam. Tempus felis nostra praesent porta ligula tellus natoque dictumst imperdiet, erat dolor nostra. Integer congue dignissim laoreet 			donec volutpat a cum massa vitae imperdiet aenean vel. Auctor nunc, fermentum augue sapien malesuada nulla sollicitudin! Integer libero tristique proin mauris nisl 			urna mi! Sollicitudin tellus!
+		</p>
+		<p>
+			Lorem potenti commodo augue habitant phasellus. Adipiscing sollicitudin mollis facilisi ullamcorper commodo molestie massa. Tellus, congue sit sociosqu elementum 			ullamcorper habitant mus. Etiam fames magna nunc dui turpis id luctus mus. Convallis magna feugiat mattis sem lacus non non scelerisque suspendisse rutrum. Bibendum 			at ad rutrum nisl fames pharetra euismod nisl adipiscing. Hendrerit donec quam aliquam phasellus est dolor duis. Mauris, magnis penatibus sodales lacinia 				vestibulum. Praesent, luctus pharetra diam leo at mi ad augue placerat. Velit sollicitudin mattis, cubilia posuere ultrices fringilla rutrum.
+		</p>
+		<p>
+			Curabitur in sem class proin! Lorem sodales massa velit netus tristique gravida aliquet at. Vulputate metus sociosqu arcu, eu nostra nullam sociis ut. Pharetra 			porta nostra turpis posuere consequat. Eleifend sit rhoncus bibendum aenean aliquam. Cum neque sagittis odio ligula dis platea per pharetra nostra montes dictumst 			diam. Sociis cum purus, tristique nascetur ad tortor senectus.
+		</p>
+		<p>
+			Scelerisque eu fringilla ipsum tempor mus penatibus dui leo facilisis etiam. Turpis elementum est integer lacinia. Dis auctor netus urna aenean dapibus facilisis 			senectus sociosqu porttitor taciti volutpat. Condimentum nunc per praesent nisl enim. Curae; curabitur litora eros; vulputate maecenas litora sollicitudin. Maecenas 			aptent ridiculus eu litora arcu senectus. Auctor fames varius lorem metus eu vestibulum habitasse porta.
+		</p>
         </section>
     </main>
+<script>
+    // Ottieni il bottone
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Mostra il bottone quando si scrolla giù
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Quando si clicca sul bottone, scrolla fino in cima
+    scrollToTopBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+</script>
 </body>
 </html>
